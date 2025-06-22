@@ -1,0 +1,20 @@
+<IronSharkInc>
+
+    <!-- After getting Biome Badge, Smoothies grant Storm Immunity -->
+    <insertAfter xpath="//buff[@name='buffBurnt_Storm']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @action='AddHealth' and @health='@$StormDamage']">
+        <requirement name="CVarCompare" cvar="$buffBurntSmoothieRunDuration" operation="LTE" value="0"/>
+    </insertAfter>
+
+    <insertAfter xpath="//buff[@name='buffDesert_Storm']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @action='AddHealth' and @health='@$StormDamage']">
+        <requirement name="CVarCompare" cvar="$buffOasisSmoothieRunDuration" operation="LTE" value="0"/>
+    </insertAfter>
+
+    <insertAfter xpath="//buff[@name='buffSnow_Storm']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @action='AddHealth' and @health='@$StormDamage']">
+        <requirement name="CVarCompare" cvar="$buffFrostbiteSmoothieRunDuration" operation="LTE" value="0"/>
+    </insertAfter>
+
+    <insertAfter xpath="//buff[@name='buffWasteland_Storm']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @action='AddHealth' and @health='@$StormDamage']">
+        <requirement name="CVarCompare" cvar="$buffAtomicSmoothieRunDuration" operation="LTE" value="0"/>
+    </insertAfter>
+
+</IronSharkInc>
