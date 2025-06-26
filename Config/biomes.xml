@@ -1,0 +1,14 @@
+<IronSharkInc>
+
+    <!-- set duration for all storms -->
+    <set xpath="//weather[@name='storm']">1.0</set>
+
+    <!-- set durations for individual storms -->
+    <!-- 
+    <set xpath="//weather[@name='storm' and @buff='buffBurnt_Storm']/@duration">1.7</set>
+    <set xpath="//weather[@name='storm' and @buff='buffDesert_Storm']/@duration">2.0</set>
+    <set xpath="//weather[@name='storm' and @buff='buffSnow_Storm']/@duration">2.2</set>
+    <set xpath="//weather[@name='storm' and @buff='buffWasteland_Storm']/@duration">2.3</set>
+    -->
+
+</IronSharkInc>
