@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="ISI-StormChasers-SmoothieDurations" />
+	<DisplayName value="ISI StormChasers SmoothieDurations" />
+	<Version value="2.0.2.0" />
+	<Description value="Change how long biome smoothies last" />
+	<Author value="IronSharkInc" />
+	<Website value="https://github.com/IronSharkInc" />
+</xml>

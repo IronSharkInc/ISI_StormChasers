@@ -1,0 +1,33 @@
+<IronSharkInc>
+
+    <!-- Zombie Spawner: Drinking smoothies calls in a horde of biome zombies -->
+     <append xpath="//item[@name='foodBurntSmoothie']">
+        <effect_group tiered="false">
+            <!-- only call zombies if you are in the right biome -->
+            <requirement name="InBiome" biome="9"/><!-- burnt_forest -->
+            <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffBurntSwarm"/>
+        </effect_group>
+     </append>
+
+     <append xpath="//item[@name='foodOasisSmoothie']">
+        <effect_group tiered="false">
+            <requirement name="InBiome" biome="5"/><!-- desert -->
+            <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffPlagueSwarm"/>
+        </effect_group>
+     </append>
+
+     <append xpath="//item[@name='foodFrostbiteSmoothie']">
+        <effect_group tiered="false">
+            <requirement name="InBiome" biome="1"/><!-- snow -->
+            <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffFrostSwarm"/>
+        </effect_group>
+     </append>
+
+     <append xpath="//item[@name='foodAtomicSmoothie']">
+        <effect_group tiered="false">
+            <requirement name="InBiome" biome="8"/><!-- wasteland -->
+            <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffMutatedSwarm"/>
+        </effect_group>
+     </append>
+
+</IronSharkInc>

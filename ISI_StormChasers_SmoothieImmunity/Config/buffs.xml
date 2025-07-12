@@ -1,4 +1,7 @@
 <IronSharkInc>
+    <!-- TODO: Turn off StormTimerDisplay that counts down to next damage tick (since you're now immune) -->
+    <!-- TODO: Update localization so it says it protects from storms -->
+     <!-- foodBurntSmoothieDesc, foodOasisSmoothieDesc, foodFrostbiteSmoothieDesc, foodAtomicSmoothieDesc -->
 
     <!-- After getting Biome Badge, Smoothies grant Storm Immunity -->
     <insertAfter xpath="//buff[@name='buffBurnt_Storm']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @action='AddHealth' and @health='@$StormDamage']">

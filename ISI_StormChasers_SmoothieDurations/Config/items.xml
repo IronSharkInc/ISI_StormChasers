@@ -1,0 +1,15 @@
+<IronSharkInc>
+
+    <!-- Make both smoothie effects last longer -->
+    <!-- Hazard Reducer: Being in the biome doesn't hurt anymore -->
+    <set xpath="//item[contains(@name, 'Smoothie')]/effect_group[@name='Hazard Reducer']/display_value[@name='dDuration']/@value">600</set>
+    <set xpath="//item[contains(@name, 'Smoothie')]/effect_group[@name='Hazard Reducer']/triggered_effect[contains(@cvar,'HazardTimer') and @operation='add']/@value">600</set>
+    <set xpath="//item[contains(@name, 'Smoothie')]/effect_group[@name='Hazard Reducer']/triggered_effect[contains(@cvar,'HazardTimer') and @operation='set']/@value">1800</set>
+    <set xpath="//item[contains(@name, 'Smoothie')]/effect_group[@name='Hazard Reducer']/triggered_effect[contains(@cvar,'HazardTimer') and @operation='set']/requirement/@value">1800</set>
+
+    <!-- Run Speed Boost: You run faster in the biome -->
+    <set xpath="//item[contains(@name, 'Smoothie')]/effect_group/triggered_effect[contains(@cvar,'SmoothieRunDuration') and @operation='add']/@value">606</set>
+    <set xpath="//item[contains(@name, 'Smoothie')]/effect_group/triggered_effect[contains(@cvar,'SmoothieRunDuration') and @operation='set']/@value">1818</set>
+    <set xpath="//item[contains(@name, 'Smoothie')]/effect_group/triggered_effect[contains(@cvar,'SmoothieRunDuration') and @operation='set']/requirement/@value">1818</set>
+
+</IronSharkInc>

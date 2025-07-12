@@ -1,0 +1,21 @@
+<IronSharkInc>
+
+    <!-- Change Storm Damage: how much damage the storm does per hit -->
+    <set xpath="//buff[@name='buffBurnt_Storm']//triggered_effect[@cvar='$StormDamage']/@value">    -10</set> <!-- -11 -->
+    <set xpath="//buff[@name='buffDesert_Storm']//triggered_effect[@cvar='$StormDamage']/@value">   -10</set> <!-- -12 -->
+    <set xpath="//buff[@name='buffSnow_Storm']//triggered_effect[@cvar='$StormDamage']/@value">     -10</set> <!-- -13 -->
+    <set xpath="//buff[@name='buffWasteland_Storm']//triggered_effect[@cvar='$StormDamage']/@value">-10</set> <!-- -14 -->
+
+    <!-- Change Storm Damage Tick: how often the storm does damage -->
+    <set xpath="//buff[@name='buffBurnt_Storm']//triggered_effect[@trigger='onSelfBuffStart' and @cvar='.StormTimerDMG' and @operation='set']/@value">    5</set> <!-- 6 -->
+    <set xpath="//buff[@name='buffDesert_Storm']//triggered_effect[@trigger='onSelfBuffStart' and @cvar='.StormTimerDMG' and @operation='set']/@value">   5</set> <!-- 6 -->
+    <set xpath="//buff[@name='buffSnow_Storm']//triggered_effect[@trigger='onSelfBuffStart' and @cvar='.StormTimerDMG' and @operation='set']/@value">     5</set> <!-- 6 -->
+    <set xpath="//buff[@name='buffWasteland_Storm']//triggered_effect[@trigger='onSelfBuffStart' and @cvar='.StormTimerDMG' and @operation='set']/@value">5</set> <!-- 6 -->
+
+    <!-- Change Storm Grace Period: how many seconds you have to find shelter -->
+    <set xpath="//buff[@name='buffBurnt_Storm']//triggered_effect[@cvar='.StormTimerGrace' and @operation='set']/@value">    15</set> <!-- 17 -->
+    <set xpath="//buff[@name='buffDesert_Storm']//triggered_effect[@cvar='.StormTimerGrace' and @operation='set']/@value">   15</set> <!-- 15 -->
+    <set xpath="//buff[@name='buffSnow_Storm']//triggered_effect[@cvar='.StormTimerGrace' and @operation='set']/@value">     15</set> <!-- 13 -->
+    <set xpath="//buff[@name='buffWasteland_Storm']//triggered_effect[@cvar='.StormTimerGrace' and @operation='set']/@value">15</set> <!-- 11 -->
+
+</IronSharkInc>

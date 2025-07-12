@@ -1,0 +1,50 @@
+<IronSharkInc>
+
+    <!-- Zombie Spawner: Drinking smoothies calls in a horde of biome zombies -->
+    <append xpath="//buffs">
+         <buff name="buffBurntSwarm" icon="ui_game_symbol_berserker" icon_color="255, 0, 0" icon_blink="true">
+            <display_value_key value="Biome Swarm!"/>
+            <display_value value="xxx"/>
+            <duration value="5"/>
+            <stack_type value="ignore"/>
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="zombieburntalert" play_in_head="true"/>
+                <triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="spawn_burnt_zombies"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffPlagueSwarm" icon="ui_game_symbol_berserker" icon_color="255, 0, 0" icon_blink="true">
+            <display_value_key value="Biome Swarm!"/>
+            <display_value value="xxx"/>
+            <duration value="5"/>
+            <stack_type value="ignore"/>
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="plaguealert" play_in_head="true"/>
+                <triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="spawn_plague_spitters"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffFrostSwarm" icon="ui_game_symbol_berserker" icon_color="255, 0, 0" icon_blink="true">
+            <display_value_key value="Biome Swarm!"/>
+            <display_value value="xxx"/>
+            <duration value="5"/>
+            <stack_type value="ignore"/>
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="frostclawalert" play_in_head="true"/>
+                <triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="spawn_frost_claws"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffMutatedSwarm" icon="ui_game_symbol_berserker" icon_color="255, 0, 0" icon_blink="true">
+            <display_value_key value="Biome Swarm!"/>
+            <display_value value="xxx"/>
+            <duration value="5"/>
+            <stack_type value="ignore"/>
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="zombie_mutated_alert" play_in_head="true"/>
+                <triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="spawn_mutateds"/>
+            </effect_group>
+        </buff>
+    </append>
+
+</IronSharkInc>

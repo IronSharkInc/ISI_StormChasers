@@ -1,0 +1,117 @@
+<IronSharkInc>
+
+    <!-- Add events to spawn biome zombies -->
+    <append xpath="//gameevents">
+        
+        <action_sequence name="spawn_burnt_zombies">
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieBurntRadiated,zombieBurntCharged,zombieBurntInfernal" />
+                <property name="single_choice" value="true"/>
+                <property name="spawn_count" value="1" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="false"/>
+                <property name="min_distance" value="10"/>
+                <property name="max_distance" value="20"/>
+                <property name="spawn_type" value="WanderingHorde"/>
+                <property name="is_aggressive" value="false" />
+                <property name="attack_target" value="false" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieBurnt, zombieBurntFeral" />
+                <property name="spawn_count" value="4" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="false"/>
+                <property name="min_distance" value="10"/>
+                <property name="max_distance" value="20"/>
+                <property name="spawn_type" value="WanderingHorde"/>
+                <property name="is_aggressive" value="false" />
+                <property name="attack_target" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="spawn_plague_spitters">
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombiePlagueSpitterRadiated,zombiePlagueSpitterCharged,zombiePlagueSpitterInfernal" />
+                <property name="spawn_count" value="1" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="false"/>
+                <property name="min_distance" value="5"/>
+                <property name="max_distance" value="20"/>
+                <property name="spawn_type" value="WanderingHorde"/>
+                <property name="is_aggressive" value="false" />
+                <property name="attack_target" value="false" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombiePlagueSpitter,zombiePlagueSpitterFeral" />
+                <property name="spawn_count" value="4" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="false"/>
+                <property name="min_distance" value="5"/>
+                <property name="max_distance" value="20"/>
+                <property name="spawn_type" value="WanderingHorde"/>
+                <property name="is_aggressive" value="false" />
+                <property name="attack_target" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="spawn_frost_claws">
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieFrostclawRadiated,zombieFrostclawCharged,zombieFrostclawInfernal" />
+                <property name="spawn_count" value="1" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="false"/>
+                <property name="min_distance" value="5"/>
+                <property name="max_distance" value="20"/>
+                <property name="spawn_type" value="WanderingHorde"/>
+                <property name="is_aggressive" value="false" />
+                <property name="attack_target" value="false" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieFrostclaw,zombieFrostclawFeral" />
+                <property name="spawn_count" value="4" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="false"/>
+                <property name="min_distance" value="5"/>
+                <property name="max_distance" value="20"/>
+                <property name="spawn_type" value="WanderingHorde"/>
+                <property name="is_aggressive" value="false" />
+                <property name="attack_target" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="spawn_mutateds">
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieMutatedRadiated,zombieMutatedCharged,zombieMutatedInfernal" />
+                <property name="spawn_count" value="1" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="false"/>
+                <property name="min_distance" value="5"/>
+                <property name="max_distance" value="20"/>
+                <property name="spawn_type" value="WanderingHorde"/>
+                <property name="is_aggressive" value="false" />
+                <property name="attack_target" value="false" />
+            </action>
+            <action class="SpawnEntity">
+                <property name="entity_names" value="zombieMutated,zombieMutatedFeral" />
+                <property name="spawn_count" value="4" />
+                <property name="air_spawn" value="false" />
+                <property name="add_to_group" value="zombies" />
+                <property name="safe_spawn" value="false"/>
+                <property name="min_distance" value="5"/>
+                <property name="max_distance" value="20"/>
+                <property name="spawn_type" value="WanderingHorde"/>
+                <property name="is_aggressive" value="false" />
+                <property name="attack_target" value="false" />
+            </action>
+        </action_sequence>
+
+    </append>
+
+</IronSharkInc>

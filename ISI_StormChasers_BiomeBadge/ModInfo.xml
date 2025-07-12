@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+	<Name value="ISI-StormChasers-BiomeBadges" />
+	<DisplayName value="ISI StormChasers BiomeBadges" />
+	<Version value="2.0.2.0" />
+	<Description value="Change the appearance of the biome badges" />
+	<Author value="IronSharkInc" />
+	<Website value="https://github.com/IronSharkInc" />
+</xml>
