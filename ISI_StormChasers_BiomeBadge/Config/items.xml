@@ -1,9 +1,0 @@
-<IronSharkInc>
-    
-    <!-- Change what the biome badge looks like -->
-    <set xpath="//item[@name='biomeBadge1']/property[@name='CustomIcon']/@value">apparelCigar</set>
-    <set xpath="//item[@name='biomeBadge2']/property[@name='CustomIcon']/@value">armorFarmerHelmet</set>
-    <set xpath="//item[@name='biomeBadge3']/property[@name='CustomIcon']/@value">armorLumberjackOutfit</set>
-    <set xpath="//item[@name='biomeBadge4']/property[@name='CustomIcon']/@value">armorNomadHelmet</set>
-
-</IronSharkInc>
