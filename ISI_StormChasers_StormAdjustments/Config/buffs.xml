@@ -1,21 +1,23 @@
 <IronSharkInc>
 
-    <!-- Change Storm Damage: how much damage the storm does per hit -->
-    <set xpath="//buff[@name='buffBurnt_Storm']//triggered_effect[@cvar='$StormDamage']/@value">    -10</set> <!-- -11 -->
-    <set xpath="//buff[@name='buffDesert_Storm']//triggered_effect[@cvar='$StormDamage']/@value">   -10</set> <!-- -12 -->
-    <set xpath="//buff[@name='buffSnow_Storm']//triggered_effect[@cvar='$StormDamage']/@value">     -10</set> <!-- -13 -->
-    <set xpath="//buff[@name='buffWasteland_Storm']//triggered_effect[@cvar='$StormDamage']/@value">-10</set> <!-- -14 -->
+    <!-- Adjust storm damage -->
+    <!-- default: -2, -1 -->
+    <set xpath="//buff[contains(@name, '_Storm_Stage02')]//triggered_effect[@action='AddHealth' and @health='-2']/@health">-4</set>
+    <set xpath="//buff[contains(@name, '_Storm_Stage02')]//triggered_effect[@action='AddHealth' and @health='-1']/@health">-2</set>
 
-    <!-- Change Storm Damage Tick: how often the storm does damage -->
-    <set xpath="//buff[@name='buffBurnt_Storm']//triggered_effect[@trigger='onSelfBuffStart' and @cvar='.StormTimerDMG' and @operation='set']/@value">    5</set> <!-- 6 -->
-    <set xpath="//buff[@name='buffDesert_Storm']//triggered_effect[@trigger='onSelfBuffStart' and @cvar='.StormTimerDMG' and @operation='set']/@value">   5</set> <!-- 6 -->
-    <set xpath="//buff[@name='buffSnow_Storm']//triggered_effect[@trigger='onSelfBuffStart' and @cvar='.StormTimerDMG' and @operation='set']/@value">     5</set> <!-- 6 -->
-    <set xpath="//buff[@name='buffWasteland_Storm']//triggered_effect[@trigger='onSelfBuffStart' and @cvar='.StormTimerDMG' and @operation='set']/@value">5</set> <!-- 6 -->
+    <!-- Adjust frequency of storm damage -->
+    <!-- default: 1 -->
+    <set xpath="//buff[contains(@name, '_Storm_Stage02')]/update_rate/@value">2</set>
 
-    <!-- Change Storm Grace Period: how many seconds you have to find shelter -->
-    <set xpath="//buff[@name='buffBurnt_Storm']//triggered_effect[@cvar='.StormTimerGrace' and @operation='set']/@value">    15</set> <!-- 17 -->
-    <set xpath="//buff[@name='buffDesert_Storm']//triggered_effect[@cvar='.StormTimerGrace' and @operation='set']/@value">   15</set> <!-- 15 -->
-    <set xpath="//buff[@name='buffSnow_Storm']//triggered_effect[@cvar='.StormTimerGrace' and @operation='set']/@value">     15</set> <!-- 13 -->
-    <set xpath="//buff[@name='buffWasteland_Storm']//triggered_effect[@cvar='.StormTimerGrace' and @operation='set']/@value">15</set> <!-- 11 -->
+    <!-- Adjust grace period (higher tier clothing extends this effect up to 4x + base) -->
+    <!-- default: 30 -->
+    <set xpath="//triggered_effect[contains(@cvar, 'Stage01BaseTime') and @operation='set']/@value">30</set>
+
+    <!-- 
+    <set xpath="//triggered_effect[@cvar='.BurntStage01BaseTime'       and @operation='set']">30</set>
+    <set xpath="//triggered_effect[@cvar='.DesertStage01BaseTime'      and @operation='set']">30</set>
+    <set xpath="//triggered_effect[@cvar='.SnowStage01BaseTime'        and @operation='set']">30</set>
+    <set xpath="//triggered_effect[@cvar='.WastelandStage01BaseTime'   and @operation='set']">30</set>
+     -->
 
 </IronSharkInc>
