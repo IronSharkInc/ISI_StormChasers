@@ -30,7 +30,7 @@
             <duration value="5"/>
             <stack_type value="ignore"/>
             <effect_group>
-                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="frostclawalert" play_in_head="true"/>
+                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="chuckalert" play_in_head="true"/>
                 <triggered_effect trigger="onSelfBuffStart" action="CallGameEvent" event="spawn_frost_claws"/>
             </effect_group>
         </buff>
