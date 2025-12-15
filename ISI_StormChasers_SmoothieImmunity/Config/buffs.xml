@@ -1,23 +1,25 @@
 <IronSharkInc>
-    <!-- TODO: Turn off StormTimerDisplay that counts down to next damage tick (since you're now immune) -->
-    <!-- TODO: Update localization so it says it protects from storms -->
-     <!-- foodBurntSmoothieDesc, foodOasisSmoothieDesc, foodFrostbiteSmoothieDesc, foodAtomicSmoothieDesc -->
 
-    <!-- After getting Biome Badge, Smoothies grant Storm Immunity -->
-    <insertAfter xpath="//buff[@name='buffBurnt_Storm']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @action='AddHealth' and @health='@$StormDamage']">
-        <requirement name="CVarCompare" cvar="$buffBurntSmoothieRunDuration" operation="LTE" value="0"/>
-    </insertAfter>
+    <!-- Consuming a smoothie will negate storm damage -->
 
-    <insertAfter xpath="//buff[@name='buffDesert_Storm']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @action='AddHealth' and @health='@$StormDamage']">
-        <requirement name="CVarCompare" cvar="$buffOasisSmoothieRunDuration" operation="LTE" value="0"/>
-    </insertAfter>
-
-    <insertAfter xpath="//buff[@name='buffSnow_Storm']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @action='AddHealth' and @health='@$StormDamage']">
-        <requirement name="CVarCompare" cvar="$buffFrostbiteSmoothieRunDuration" operation="LTE" value="0"/>
-    </insertAfter>
-
-    <insertAfter xpath="//buff[@name='buffWasteland_Storm']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @action='AddHealth' and @health='@$StormDamage']">
-        <requirement name="CVarCompare" cvar="$buffAtomicSmoothieRunDuration" operation="LTE" value="0"/>
-    </insertAfter>
+    <!-- Stop taking damage -->
+    <append xpath="//buff[@name='buffBurnt_Storm_Stage02']/effect_group/requirement[@name='!HasBuff']/@buff">,buffBurntSmoothieRun</append>
+    <append xpath="//buff[@name='buffDesert_Storm_Stage02']/effect_group/requirement[@name='!HasBuff']/@buff">,buffOasisSmoothieRun</append>
+    <append xpath="//buff[@name='buffSnow_Storm_Stage02']/effect_group/requirement[@name='!HasBuff']/@buff">,buffFrostbiteSmoothieRun</append>
+    <append xpath="//buff[@name='buffWasteland_Storm_Stage02']/effect_group/requirement[@name='!HasBuff']/@buff">,buffAtomicSmoothieRun</append>
+    
+    <!-- Stop warning -->
+    <append xpath="//buff[@name='buffBurnt_Storm_Stage02']/effect_group/requirement_group[@op='or']">
+        <requirement name="HasBuff" buff="buffBurntSmoothieRun"/>
+    </append>
+    <append xpath="//buff[@name='buffDesert_Storm_Stage02']/effect_group/requirement_group[@op='or']">
+        <requirement name="HasBuff" buff="buffOasisSmoothieRun"/>
+    </append>
+    <append xpath="//buff[@name='buffSnow_Storm_Stage02']/effect_group/requirement_group[@op='or']">
+        <requirement name="HasBuff" buff="buffFrostbiteSmoothieRun"/>
+    </append>
+    <append xpath="//buff[@name='buffWasteland_Storm_Stage02']/effect_group/requirement_group[@op='or']">
+        <requirement name="HasBuff" buff="buffAtomicSmoothieRun"/>
+    </append>
 
 </IronSharkInc>
