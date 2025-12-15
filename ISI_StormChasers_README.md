@@ -12,7 +12,9 @@ Consuming a smoothie will negate storm damage (but not the other effects)
 
 ## Smoothie Spawns
 
-Drinking a smoothie now summons a small swarm of the zombies for that biome. The zombies are not immediately aggressive, so you might be able to sneak away (if they're far enough away). Makes it easier to hunt the zombies to get the badge. If combined with the Smoothie Immunity it adds some risk back in to storms that isn't completely unavoidable.
+Drinking a smoothie now summons a small swarm of the zombies for that biome. The zombies are not immediately aggressive, so you might be able to sneak away.
+
+This also makes it easier to find the zombies needed for the biome challenges.
 
 ## Storm Adjustments
 
@@ -49,8 +51,6 @@ __Test Steps:__
 1. During a storm, consume the corresponding biome smoothie
 2. Stand in the storm without shelter
 3. __Expected Result:__ No storm damage taken while smoothie is active
-
-BROKEN
 
 ### Smoothie Spawns Testing
 
